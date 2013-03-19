@@ -1,0 +1,37 @@
+Assignment
+==========
+Page01 - Simon - PDF done and uploaded - Scribus files uploaded to Page01 folder.
+
+??
+
+Currently not allocated
+=======================
+Sam
+Simon
+Colin
+Edrick
+Ian
+Josh
+Lix
+Will
+
+----
+
+Starting point (7th Dec.)
+==============
+Page01 - No scribus files, no text files.
+Page02-03 - Scribus format available, needs pdf conversion
+Page04-05 - Only pdf files.  Need input files from Meltwater.
+Page06-07 - No scribus files, no text files.
+Page08-09 - Scribus format available, needs pdf conversion
+Page10-14 - Scribus format and pdf available
+Page15 - Scribus format available 
+Page16-17 - Scribus format available, needs pdf conversion
+Page18-19 - Scribus format and pdf available
+Page20-21 - Scribus format and pdf available
+Page22-23 - No scribus files, no text files.
+Page24-25 - No scribus files, no text files.
+Page26-27 - No scribus files, no text files.  Needs current scratch patch style.
+Page28-29 - No scribus files, no text files.  Needs current Python pit style.
+Page30-31 - No scribus files, no text files. 
+Page32 - No scribus files, no text files.

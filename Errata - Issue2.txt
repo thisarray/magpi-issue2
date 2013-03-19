@@ -1,0 +1,11 @@
+Debian LiveCD:
+The url has changed (since the image has been updated!)
+
+Page 22/23:
+Author has mentioned there are some corrections needed. No details given.
+User has reported it produces "bus errors" when running with newer images, need to confirm and correct this if required.
+
+Email in gmail apparently:
+ yeah I think I sent an email with the corrections, it was only things like, see below, when the pic was not below it was above... that kind of thing
+you could also edit it to say you can download it from the Pi Store, instead of the drop box link
+sudo apt-get install schism
