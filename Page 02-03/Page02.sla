@@ -30,7 +30,7 @@
         <LAYERS NUMMER="2" LEVEL="1" NAME="Images" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ff00"/>
         <LAYERS NUMMER="3" LEVEL="2" NAME="Text" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#0000ff"/>
         <Printer firstUse="1" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="1" useColor="1" mirrorH="1" mirrorV="1" useICC="1" doGCR="1" doClip="1" setDevParam="0" useDocBleeds="1" cropMarks="0" bleedMarks="1" registrationMarks="0" colorMarks="1" includePDFMarks="0" PSLevel="3" PDLanguage="3" markOffset="1.06809996176056e-306" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="" printerCommand=""/>
-        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="1" Grayscale="0" RGBMode="0" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="600" Resolution="600" Version="14" Intent="1" Intent2="0" SolidP="" ImageP="" PrintP="" InfoString="" BTop="8.50393700787402" BLeft="8.50393700787402" BRight="8.50393700787402" BBottom="8.50393700787402" useDocBleeds="0" cropMarks="1" bleedMarks="1" registrationMarks="1" colorMarks="1" docInfoMarks="1" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="0" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="1" Quality="2" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="1" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="600" Resolution="600" Version="14" Intent="1" Intent2="0" SolidP="" ImageP="" PrintP="" InfoString="" BTop="8.50393700787402" BLeft="8.50393700787402" BRight="8.50393700787402" BBottom="8.50393700787402" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="0" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
             <Fonts Name="URW Chancery L Medium Italic"/>
             <Subset Name="FreeSans Bold Oblique"/>
             <Subset Name="FreeSans Regular"/>
@@ -80,9 +80,9 @@
             <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="What a month it has been following the release of Issue 1! The interest we received has astounded us, with over 100,000 views by readers as far apart as the US to New Zealand and Russia to South America. We have had positive reviews from the BBC's Rory Cellan-Jones, the Wall Street Journal Tech and many others. Thank you all for your kind words of support and constructive comments."/>
             <para LINESP="21"/>
             <para LINESP="21"/>
-            <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="Following the release of Issue 1, some of our readers soon highlighted an error in the logo for Java Script. We hope that this has not caused too much confusion and "/>
+            <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="Following the release of Issue 1, some of our readers soon highlighted an error in the logo for JavaScript. We hope that this has not caused too much confusion and "/>
             <para LINESP="21"/>
-            <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="wish to clarify that the official logo for Java Script is as follows:"/>
+            <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="wish to clarify that the official logo for JavaScript is as follows:"/>
             <para LINESP="21"/>
             <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="Thank you for drawing this to our attention."/>
             <para LINESP="21"/>
@@ -90,7 +90,7 @@
             <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="In this issue of the MagPi we return to the Python Pit to give you more tasty tutorials and tips whilst also introducing you to our brand new section, the Command Line Clinic. The Scratch Patch will be returning in Issue 3. We invite you into the world of interfacing, how to install an Operating System on an SD card and setting up the basics on your Raspberry Pi. There is also more on building the skutter robotic arm. If this wasn't enough, we thought we would treat you to a double page spread dissecting the Pi and much, much more. "/>
             <para LINESP="21"/>
             <para LINESP="21"/>
-            <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="Before drawing this editorial to an end, I would like to take this opotunity to thank not only the Raspberry Pi foundation for warmly welcoming us but also to the MagPi team and all of its contributors for their continual hard work and dedication to producing the magazine."/>
+            <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="Before drawing this editorial to an end, I would like to take this opotunity to thank not only the Raspberry Pi Foundation for warmly welcoming us but also to the MagPi team and all of its contributors for their continual hard work and dedication to producing the magazine."/>
             <para LINESP="21"/>
             <para LINESP="21"/>
             <ITEXT FONT="URW Chancery L Medium Italic" FONTSIZE="14" CH="We hope you continue to enjoy reading the MagPi and that it inspires you to get programming"/>
