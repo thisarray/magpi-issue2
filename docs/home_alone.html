@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Alone</title>
+  <script src="../jsgame0.js"></script>
+  <style type="text/css" media="screen">
+body {
+  background-color: white;
+  color: black;
+}
+.hidden {
+  display: none;
+}
+#original {
+  margin-left: 1em;
+}
+  </style>
+</head>
+
+<body>
+<section id="imageLoader" class="hidden">
+  <img class="hidden" src="images/fish.png" alt="fish" data-name="fish">
+  <img class="hidden" src="images/tux.png" alt="tux" data-name="tux">
+</section>
+
+<main>
+<h1>Home Alone</h1>
+
+<canvas id="screen">
+The game screen appears here if your browser supports the Canvas API.
+</canvas>
+<section id="controls">
+  <button type="button" id="reset">Reset</button>
+  <button type="button" id="pause">Pause</button>
+</section>
+
+<p>An homage to Home Alone based on <a href="house.html">the House</a>.</p>
+
+<h2>Attribution</h2>
+
+<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported</a>.</p>
+
+</main>
+
+<script>
+WIDTH = 423;
+HEIGHT = 347;
+TITLE = "Home Alone";
+
+// Define some colors
+const WHITE = [255, 255, 255];
+const BLACK = [0, 0, 0];
+const BG    = [186, 213, 48];
+const WALLS = [157, 109, 9];
+const DOOR  = [151, 36, 9];
+const DOOR_LIGHT = [181, 132, 14];
+
+// coordinates of glass panes
+const WINDOWS = [[82, 125], [82, 215], [262, 125], [262, 215]];
+
+/*
+ * Return a random integer N such that min <= N < max.
+ */
+function getRandomInteger(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor((Math.random() * (max - min)) + min);
+}
+
+var fish, tux;
+
+function reset() {
+  fish = new Actor('fish');
+  fish.left = 353 - fish.width;
+  fish.top = getRandomInteger(WINDOWS[2][1], WINDOWS[2][1] + 76 - fish.height);
+  fish.dx = -3;
+  tux = new Actor('tux');
+  tux.topleft = [353 - tux.width, WINDOWS[3][1] + 22];
+  tux.dx = -1;
+}
+
+function draw() {
+  //the walls
+  screen.fill(BG);     //fill the background screen colour
+  screen.draw.filled_rect(new Rect(60, 102, 305, 225), BLACK);
+  screen.draw.filled_rect(new Rect(73, 114, 280, 200), WALLS);
+
+  //the roof
+  screen.draw.filled_polygon([[35, 112], [121, 12], [296, 12], [321, 36], [321, 12], [361, 12], [361, 84], [384, 112]], BLACK);
+  screen.draw.filled_polygon([[62, 101], [128, 23], [289, 23], [334, 69], [334, 25], [348, 25], [348, 88], [361, 101]], WALLS);
+
+  //the door
+  screen.draw.filled_rect(new Rect(167, 198, 84, 125), BLACK);
+  screen.draw.filled_rect(new Rect(179, 210, 60, 101), DOOR);
+  screen.draw.filled_rect(new Rect(185, 216, 50, 54), BLACK);
+  screen.draw.filled_rect(new Rect(191, 222, 38, 41), DOOR_LIGHT);
+  screen.draw.filled_circle([209, 277], 5, BLACK);
+  //the windows
+  for (let window of WINDOWS) {
+    screen.draw.filled_rect(new Rect(window[0], window[1], 76, 76), BLACK);
+
+    let pane = new Rect(window[0] + 12, window[1] + 12, 52, 52),
+        x, y, width, height;
+    screen.draw.filled_rect(pane, WHITE);
+
+    for (let silhouette of [fish, tux]) {
+      if (silhouette.colliderect(pane)) {
+        x = Math.max(0, pane.left - silhouette.left);
+        y = Math.max(0, pane.top - silhouette.top);
+        width = Math.min(silhouette.width - x, pane.width, pane.right - silhouette.left);
+        height = Math.min(silhouette.height - y, pane.height, pane.bottom - silhouette.top);
+        screen.blit(silhouette.name, new Rect(x, y, width, height), new Rect(Math.max(pane.left, silhouette.left), Math.max(pane.top, silhouette.top), width, height));
+      }
+    }
+
+    // Draw the window cross outline on top although it would not matter
+    // since it is black, the same color as the silhouettes
+    // The outline is based on the center of the line
+    screen.draw.line(pane.midtop, pane.midbottom, BLACK, 8);
+    screen.draw.line(pane.midleft, pane.midright, BLACK, 8);
+  }
+}
+
+function update(dt) {
+  fish.left += fish.dx;
+  tux.left += tux.dx;
+  if (fish.left < 73) {
+    fish.left = 353 - fish.width;
+    fish.top = getRandomInteger(WINDOWS[2][1], WINDOWS[2][1] + 76 - fish.height);
+  }
+  if ((tux.left < 73) || (353 < tux.right)) {
+    tux.dx *= -1;
+  }
+}
+
+//lets see the end result
+window.addEventListener('load', (event) => {
+  screen.init();
+});
+</script>
+</body>
+
+</html>
